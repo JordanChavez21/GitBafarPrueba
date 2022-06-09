@@ -1,0 +1,23 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.f" xmlns:fb="sap.ui.comp.filterbar" xmlns:vm="sap.ui.comp.variants" controllerName="com.users.usersapp.controller.FindView" height="100%">
+                        <Page id="detail" title="Detalles de la busqueda" class="sapUiStdPage">
+                            <content>
+                            	<SearchField id="cat" liveChange="onSearch"/>
+                                <Text text="" id="valor"/>
+                                <List
+                                    id="results"
+                                    width="auto"
+                                    items="{
+                                        path : 'Model>/ItemsSet'
+                                    }">
+                                    <items>
+                                        <ObjectListItem
+                                            title="{Model>IdLg}">
+                                            <firstStatus>
+                                                <ObjectStatus text="{Model>Pm}"/>
+                                            </firstStatus>
+                                        </ObjectListItem>
+                                    </items>    
+                                </List>
+                            </content>
+                        </Page>
+</mvc:View>

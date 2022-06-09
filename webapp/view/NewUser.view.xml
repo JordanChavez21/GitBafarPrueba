@@ -1,0 +1,23 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.users.usersapp.controller.NewUser">
+			<Page title="Title">
+				<customHeader>
+					<Toolbar>
+						<Button id="backTo" type="Back" press="onBack"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+				</customHeader>
+				<content>
+					<Input type="Number" id="IdLg" maxLength="8" editable="false"/>
+					<Input type="Text" id="Pm" maxLength="12" placeholder="Project Manager" required="true"/>
+					<Input type="Text" id="Text" maxLength="130" placeholder="Descripcion" required="true"/>
+					<Input type="Url" id="Link" maxLength="40" placeholder="Archivo" required="true"/>
+					<Input type="Text" id="Title" maxLength="70" placeholder="Titulo" required="true"/>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button text="Guardar" id="insertData" press="onInsert"/>
+					</Toolbar>
+				</footer>
+			</Page>
+</mvc:View>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZPRUEBAMO_SRV" xml:lang="es" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="VER_TABLA_GET" sap:content-version="1">
+				<Key><PropertyRef Name="IdEjemplo"/></Key><Property Name="IdEjemplo" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="8 posiciones numéricas"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NoEmpl" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="8 posiciones numéricas"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Usuario" Type="Edm.String" Nullable="false" MaxLength="64" sap:unicode="false" sap:label="String (64 caracts.)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Puesto" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Car.20" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZPRUEBAMO_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="VER_TABLA_GETSet" EntityType="ZPRUEBAMO_SRV.VER_TABLA_GET" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/></EntityContainer><atom:link rel="self"
+				href="https://webidecp-he7321214.dispatcher.us3.hana.ondemand.com/destinations/SAP_Gateway/sap/opu/odata/sap/ZPRUEBAMO_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version"
+				href="https://webidecp-he7321214.dispatcher.us3.hana.ondemand.com/destinations/SAP_Gateway/sap/opu/odata/sap/ZPRUEBAMO_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

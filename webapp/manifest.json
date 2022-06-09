@@ -1,0 +1,152 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "com.users.usersapp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZSO_NEWPRJC_SRV": {
+				"uri": "/sap/opu/odata/sap/ZSO_NEWPRJC_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZSO_NEWPRJC_SRV/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "com.users.usersapp.view.NewView",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.users.usersapp.i18n.i18n"
+				}
+			},
+			"Model": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Request",
+					"useBatch": true
+				},
+				"dataSource": "ZSO_NEWPRJC_SRV",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.users.usersapp.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "Home",
+					"pattern": "",
+					"target": [
+						"TargetHome"
+					]
+				},
+				{
+					"name": "DispInf",
+					"pattern": "dispinf/{IdLg}",
+					"target": [
+						"TargetDispInf"
+					]
+				},
+				{
+					"name": "NewUser",
+					"pattern": "newuser",
+					"target": [
+						"TargetNewUser"
+					]
+				},
+				{
+					"name": "FindView",
+					"pattern": "findview",
+					"target":[
+						"TargetFindView"	
+					]
+				}
+			],
+			"targets": {
+				"TargetHome": {
+					"viewType": "XML",
+					"viewName": "Home"
+				},
+				"NewView": {
+					"viewType": "XML",
+					"viewName": "NewView"
+				},
+				"TargetDispInf": {
+					"viewType": "XML",
+					"viewName": "DispInf"
+				},
+				"TargetNewUser": {
+					"viewType": "XML",
+					"viewName": "NewUser"
+				},
+				"TargetFindView": {
+					"viewType": "XML",
+					"viewName": "FindView"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.users.usersapp.controller.Home" displayBlock="true">
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Table id="idProductsTable" inset="false" items="{path:'Model>/ItemsSet'}">
+							<columns>
+								<Column width="12em">
+									<Text text="Usuario"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="# Empleado"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="Descripcion"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem type="Navigation" press="onPressItem">
+									<cells>
+										<ObjectIdentifier text="{Model>IdLg}"/>
+										<Text text="{Model>Pm}"/>
+										<Text text="{Model>State}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+					<footer>
+						<Toolbar>
+							<ToolbarSpacer/>
+							<Button id="onNav" press="onPressNew" icon="sap-icon://navigation-right-arrow"/>
+							<Button id="onNav2" press="onPressFind" text="Buscar"/>
+						</Toolbar>
+					</footer>
+				</Page>
+</mvc:View>
