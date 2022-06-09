@@ -39,7 +39,7 @@ sap.ui.define([
     // just this.getResoureBundle() ... 
     getResourceBundle: function () {
  
-      // ... instead ofss
+      // ... instead ofsss
       return this.getOwnerComponent().getModel("i18n").getResourceBundle();
  
     },
